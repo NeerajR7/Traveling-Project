@@ -1,150 +1,348 @@
+/* --- Modern CSS Reset & Variables --- */
+:root {
+  --primary-color: #008080; /* Teal */
+  --secondary-color: #004c4c; /* Darker Teal */
+  --accent-color: #f75e4c; /* Orange Accent */
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+  --light-text: #ffffff;
+  --font-family: "Poppins", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--light-text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- Header & Navigation --- */
 #header {
   display: flex;
-}
-#header > div {
-  width: 33%;
-  text-align: center;
-  padding: 20px;
-  margin: 0px;
-}
-.btn1 {
-  background-color: rgb(32, 211, 44);
-  font-size: 20px;
-  color: white;
-  padding: 10px;
-  border-style: none;
-  border-radius: 10px;
-}
-.btn1:hover {
-  background-color: #f75e4c;
-}
-.btn2 {
-  background-color: rgb(32, 211, 44);
-  color: white;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: var(--light-text);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn2:hover {
-  background-color: #f75e4c;
+#title {
+  font-size: 28px;
+  font-weight: 700;
 }
-.fa {
-  padding: 20px;
-  font-size: 20px;
-  width: 30px;
-  text-decoration: none;
-  border-radius: 50%;
+#title span {
+  color: var(--primary-color);
 }
-span {
-  color: rgb(32, 211, 44);
-}
+
 .nav {
   list-style: none;
-  background-color: rgb(32, 211, 44); /* background */
-  padding: 10px;
-  margin: 0;
   display: flex;
-  justify-content: center;
 }
 .nav li a {
   text-decoration: none;
-  color: white;
-  font-size: 20px;
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.nav li {
-  padding: 10px;
-  margin: 0 5px;
-}
-#banner {
-  background-image: url("img/banner.jpg");
-  justify-content: center;
-  background-color: white;
-  flex-wrap: wrap;
-  height: 300px;
-}
-#banner > h1 {
-  color: white;
-  font-size: 45px;
-  text-align: center;
-  padding-top: 100px;
-  width: 100%;
-  height: 50px;
-}
-#banner > p {
-  color: rgb(25, 24, 24);
-  font-size: 20px;
-  text-align: center;
-  padding-top: 0px;
-  width: 100%;
-}
-#section-1 {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-}
-#holiday-box {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  text-align: left;
-  background-color: white;
-  border-radius: 10px;
+.nav li a:hover {
+  background-color: var(--primary-color);
+  color: var(--light-text);
 }
 
+#header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+.social-icons .fa {
+  font-size: 18px;
+  color: var(--text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons .fa:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+/* --- Buttons --- */
+.btn1,
+.btn2 {
+  background-color: var(--primary-color);
+  font-size: 16px;
+  color: white;
+  padding: 12px 25px;
+  border-style: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn1:hover,
+.btn2:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* --- Banner Section --- */
+#banner {
+  position: relative;
+  /* --- THIS IS YOUR NEW BACKGROUND IMAGE PATH --- */
+  background-image: url("img/istockphoto-858917054-612x612.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--light-text);
+}
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Added overlay for text readability */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+#banner h1 {
+  font-size: 48px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+#banner p {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+/* --- Section 1: Holidays --- */
+#section-1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 20px;
+}
+#holiday-box {
+  flex: 1;
+}
 #holiday-box h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  line-height: 1.4;
+  font-size: 36px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+#holiday-box h2 span {
+  color: var(--primary-color);
 }
 #holiday-box p {
   font-size: 16px;
-  color: #333;
-  margin-bottom: 20px;
+  color: #666;
+  margin-bottom: 30px;
 }
-#section-1 > div {
-  width: 250px;
+.holiday-image img {
+  width: 100%;
   height: 350px;
-  margin: 10px;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #fff;
-  box-sizing: border-box;
-}
-#section-2 {
-  background-color: rgb(218, 214, 214);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-#section-2 > div img {
-  width: 600px;
-  height: auto;
-  border-radius: 10px;
   object-fit: cover;
-  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.holiday-image img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Section 2: Blog --- */
+#section-2 {
+  background-color: var(--bg-color);
+  padding: 60px 0;
+}
+.blog-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+#blog-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
 }
 #blog-content {
   flex: 1;
-  max-width: 600px;
-  margin-top: 20px;
 }
-#blog-content p {
-  font-size: 19px;
-  color: #222;
-  line-height: 1.7;
+#blog-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+#blog-content h2 {
+  font-size: 36px;
   margin-bottom: 20px;
 }
+#blog-content p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* --- Section 3: CTA --- */
 #section-3 {
-  background-color: white;
-  padding: 100px;
+  padding: 80px 20px;
   text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+}
+#section-3 h1 {
+  font-size: 36px;
+}
+#section-3 h3 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+#section-3 .btn1 {
+  background-color: var(--accent-color);
+}
+#section-3 .btn1:hover {
+  background-color: #d84a38; /* Darker accent */
+}
+
+/* --- FEATURE 1: DESTINATIONS SECTION --- */
+#destinations-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.destination-card {
+  background: var(--light-text);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.destination-card:hover {
+  /* Smooth animation on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+.card-content h3 {
+  margin-bottom: 10px;
+}
+.card-content p {
+  color: #666;
+  font-size: 15px;
+}
+
+/* --- FEATURE 2: FOOTER --- */
+#footer {
+  background-color: #222;
+  color: #ccc;
+  padding-top: 60px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+.footer-column h3,
+.footer-column h4 {
+  color: var(--light-text);
+  margin-bottom: 20px;
+}
+.footer-column.about h3 span {
+  color: var(--primary-color);
+}
+.footer-column p {
+  line-height: 1.7;
+  font-size: 15px;
+}
+.social-icons-footer {
+  margin-top: 20px;
+}
+.social-icons-footer .fa {
+  color: var(--light-text);
+  font-size: 18px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+.social-icons-footer .fa:hover {
+  color: var(--primary-color);
+}
+.footer-column.links ul {
+  list-style: none;
+}
+.footer-column.links ul li a {
+  text-decoration: none;
+  color: #ccc;
+  margin-bottom: 10px;
+  display: block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.footer-column.links ul li a:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+.newsletter-form {
+  display: flex;
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.newsletter-form button {
+  padding: 10px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.newsletter-form button:hover {
+  background-color: var(--secondary-color);
+}
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #444;
 }

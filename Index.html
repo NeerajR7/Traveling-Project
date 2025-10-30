@@ -3,93 +3,182 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font: Poppins -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Your Stylesheet -->
     <link href="TravelingMe.css" rel="stylesheet" />
-    <title>TravelingMe.in</title>
+    <title>TravelingMe | Your Unforgettable Journey</title>
   </head>
   <body>
-    <div id="header">
-      <div id="icon">
-        <a href="" class="fa fa-instagram"></a>
-        <a href="" class="fa fa-facebook"></a>
-        <a href="" class="fa fa-linkedin"></a>
-        <a href="" class="fa fa-youtube"></a>
-      </div>
+    <!-- HEADER: Modernized and semantic <header> tag -->
+    <header id="header">
       <div id="title">
         <b>TravelingMe.<span>in</span></b>
       </div>
-      <div id="book-now">
+      <!-- NAVIGATION: Cleaned up and moved to <nav> -->
+      <nav id="menu">
+        <ul class="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Destination</a></li>
+          <li><a href="#">Packages</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- HEADER ACTIONS: Grouped social links and button -->
+      <div id="header-actions">
+        <div class="social-icons">
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+        </div>
         <input class="btn1" type="button" value="Book Now" />
       </div>
-    </div>
-    <div id="menu">
-      <ul class="nav">
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Destination</a></li>
-        <li><a href="">Packages</a></li>
-        <li><a href="">Gallery</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">FAQ</a></li>
-      </ul>
-    </div>
-    <div id="banner">
-      <h1><span>Make Your Vacation Unforgettable</span></h1>
-      <p>
-        Discover the world with Travel Kingdom – your gateway to unforgettable
-        journeys. Whether you're seeking thrilling adventures, peaceful
-        retreats, or cultural explorations, we craft experiences tailored just
-        for you. Let your dream vacation begin here!
-      </p>
-    </div>
-    <div id="section-1">
-      <div id="holiday-box">
-        <h2><span>Exclusive holidays</span><br />for any travelers</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ut sit
-          doloremque laudantium fugiat dignissimos perspiciatis. Inventore, vero
-          ducimus! Nostrum voluptas consequatur.
-        </p>
-        <button class="btn2">Book Now</button>
+    </header>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <main>
+      <!-- BANNER SECTION: Now has a readable overlay -->
+      <section id="banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+          <h1>Make Your Vacation Unforgettable</h1>
+          <p>
+            Discover the world with Travel Kingdom – your gateway to
+            unforgettable journeys.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 1: HOLIDAYS -->
+      <section id="section-1" class="container">
+        <div id="holiday-box">
+          <h2><span>Exclusive holidays</span><br />for any traveler</h2>
+          <!-- English text added -->
+          <p>
+            From relaxing beach getaways to adventurous mountain treks, we curate
+            unique holiday experiences for every type of traveler.
+          </p>
+          <button class="btn2">Learn More</button>
+        </div>
+        <div class="holiday-image">
+          <img src="https://picsum.photos/id/10/250/350" alt="Nature" />
+        </div>
+        <div class="holiday-image">
+          <img src="https://picsum.photos/id/11/250/350" alt="Nature" />
+        </div>
+        <div class="holiday-image">
+          <img src="https://picsum.photos/id/12/250/350" alt="Nature" />
+        </div>
+      </section>
+
+      <!-- SECTION 2: BLOG/ABOUT -->
+      <section id="section-2">
+        <div class="container blog-container">
+          <div id="blog-image">
+            <img src="https://picsum.photos/id/1003/600/400" alt="City Night" />
+          </div>
+          <div id="blog-content">
+            <h4>An Ultimate 4* Hotel In Chicago</h4>
+            <h2>The Story Behind <span>Travel</span> Kingdom</h2>
+            <!-- English text added -->
+            <p>
+              Travel Kingdom started with a simple idea: travel should be
+              transformative, not transactional. We wanted to share the magic of
+              discovering new cultures and breathtaking landscapes.
+            </p>
+            <p>
+              We apply that same personal touch and expert knowledge to every
+              trip we plan, ensuring each vacation is as unique as the traveler.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURE 1: POPULAR DESTINATIONS -->
+      <section id="destinations-section" class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+        <div class="destinations-grid">
+          <div class="destination-card">
+            <img src="https://picsum.photos/id/1015/400/300" alt="Paris" />
+            <div class="card-content">
+              <h3>Paris, France</h3>
+              <p>The city of lights and romance awaits you.</p>
+            </div>
+          </div>
+          <div class="destination-card">
+            <img src="https://picsum.photos/id/1018/400/300" alt="Kyoto" />
+            <div class="card-content">
+              <h3>Kyoto, Japan</h3>
+              <p>Experience the tranquility of ancient temples.</p>
+            </div>
+          </div>
+          <div class="destination-card">
+            <img src="https://picsum.photos/id/102/400/300" alt="Rome" />
+            <div class="card-content">
+              <h3>Rome, Italy</h3>
+              <p>Explore timeless history and vibrant culture.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: CALL TO ACTION -->
+      <section id="section-3">
+        <div class="container">
+          <h1>Get 15% Off Your First Booking!</h1>
+          <h3>Buy Now, and Experience the Adventure!</h3>
+          <button class="btn1">Book Your Trip</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FEATURE 2: COMPREHENSIVE FOOTER -->
+    <footer id="footer">
+      <div class="container footer-container">
+        <div class="footer-column about">
+          <h3>TravelingMe.<span>in</span></h3>
+          <p>
+            Crafting unforgettable journeys and adventures for explorers at
+            heart.
+          </p>
+          <div class="social-icons-footer">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div>
+        <div class="footer-column links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Packages</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column newsletter">
+          <h4>Join Our Newsletter</h4>
+          <p>Get the latest travel deals and updates.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
-      <div><img src="https://picsum.photos/id/10/250/350" alt="Nature" /></div>
-      <div><img src="https://picsum.photos/id/11/250/350" alt="Nature" /></div>
-      <div><img src="https://picsum.photos/id/12/250/350" alt="Nature" /></div>
-    </div>
-    <div id="section-2">
-      <div id="blog-image">
-        <img src="https://picsum.photos/id/1003/600/400" alt="City Night" />
+      <div class="footer-bottom">
+        <p>&copy; 2025 TravelingMe.in. All Rights Reserved.</p>
       </div>
-      <div id="blog-content">
-        <h4>An Ultimate 4* Hotel In Chicago</h4>
-        <h2>The Story Behind <span>Travel</span> Kingdom</h2>
-        <p>
-          Curabitur ullamcorper pretium cursus. Mauris non porta ipsum. Nullam
-          placerat varius dui, eu convallis nisl consequat at. Suspendisse
-          interdum metus tellus, sit amet mollis turpis dignissim eget. Etiam
-          condimentum finibus dolor sollicitudin eleifend. Sed et diam porta
-          risus finibus porta.
-        </p>
-        <p>
-          Nam a ante tortor. Suspendisse neque leo, efficitur in molestie at,
-          cursus vel diam. Sed at leo sit amet erat molestie elementum.
-          Pellentesque non justo velit. Curabitur tempus arcu quis ante euismod,
-          in laoreet dolor ornare. Morbi fermentum id purus quis ornare. Aliquam
-          porttitor massa eget urna iaculis varius ac in nibh. Aliquam luctus
-          libero vitae justo ornare, id malesuada lorem convallis. Sed
-          ullamcorper risus purus, quis tincidunt tellus tincidunt.
-        </p>
-      </div>
-    </div>
-    <div id="section-3">
-      <h1>Get 15% Off Your First Booking!</h1>
-      <h3>Buy Now, and Experience the Adventure!</h3>
-    </div>
-    <div id="section-4"></div>
-    <div id="footer"></div>
+    </footer>
   </body>
 </html>
